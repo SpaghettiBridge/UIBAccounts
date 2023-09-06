@@ -1,5 +1,5 @@
 id: '16939951600040.2583658724205069'
-name: onCreate
+name: CreateNewLink
 nameConfigured: true
 steps:
   - id: '16939951724380.5060815797989022'
@@ -35,16 +35,20 @@ parentPageId: '1'
 folder: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.onCreate.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.CreateNewLink.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.onCreate.name}}" successfully executed
+  successToast: Action "{{actions.CreateNewLink.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onCreate.name}}" has failed
+  errorToast: Action "{{actions.CreateNewLink.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-index: 6
+assigned: true
+selected: true
+configured: true
+parentId: '16939972929790.9691118555998752'
+index: 2

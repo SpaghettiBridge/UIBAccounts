@@ -1,0 +1,33 @@
+id: '16939972929790.9691118555998752'
+name: Create_Data
+nameConfigured: true
+steps:
+  - id: '16939972929790.4666277767864284'
+    type: draft
+    name: newStep
+    params: []
+    level: 0
+    fallthroughError: false
+    isChanged: false
+singleStep: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+folder: true
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.Create_Data.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.Create_Data.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.Create_Data.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: false
+selected: false
+index: 0

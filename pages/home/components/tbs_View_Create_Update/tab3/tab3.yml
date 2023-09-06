@@ -13,4 +13,4 @@ slots:
   - id: '16939906741270.9189302057562756'
     name: content
     children:
-      - publicAccountsTable.yml
+      - tbl_AllAccounts.yml

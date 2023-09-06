@@ -1,10 +1,10 @@
-id: '16939939589040.5464394845783873'
-name: createPublicJoinAccountServices
+id: '16939950514870.5376450029828428'
+name: findIndividualAccountServices
 nameConfigured: true
 steps:
-  - id: '16939939612580.1871088077558467'
-    type: CREATE_ENTITY
-    name: create
+  - id: '16939950564120.36239703375922216'
+    type: LOAD_COLLECTION
+    name: load
     params:
       - type: datasourceId
         value: Supabase Bridgelink Apps Database
@@ -12,22 +12,28 @@ steps:
       - type: resourceId
         value: public.join_account_services
         valueType: string
-      - type: entity
+      - type: filters
         value:
-          mode: structured
-          valueByMode:
-            structured:
-              account_id:
-                value: '{{params.accid}}'
-              service_id:
-                value: '{{params.serviceid}}'
-              service_name:
-                value: '{{params.servname}}'
-              name:
-                value: '{{params.name}}'
-              user_role:
-                value: '{{params.role}}'
-            custom: ''
+          - column: account_id
+            operation: '='
+            value:
+              value: '{{ui.slct_Account.value}}'
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -49,24 +55,26 @@ mode: manual
 modeConfigured: false
 parentPageId: '1'
 folder: false
-parentId: null
+parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
   confirmMessage: >-
     Are you sure you'd like to proceed with
-    "{{actions.createPublicJoinAccountServices.name}}"?
+    "{{actions.findIndividualAccountServices.name}}"?
   showSuccessToast: false
   successToast: >-
-    Action "{{actions.createPublicJoinAccountServices.name}}" successfully
+    Action "{{actions.findIndividualAccountServices.name}}" successfully
     executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.createPublicJoinAccountServices.name}}" has failed
+  errorToast: Action "{{actions.findIndividualAccountServices.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-assigned: false
-index: 4
+assigned: true
+selected: true
+configured: true
+index: 6

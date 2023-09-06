@@ -1,5 +1,5 @@
 id: '16939931312250.2903275771789384'
-name: onChange
+name: BulkUpdateRoles
 nameConfigured: true
 steps:
   - id: '16939931331950.39392731351116606'
@@ -20,17 +20,20 @@ parentPageId: '1'
 folder: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.onChange.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.BulkUpdateRoles.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.onChange.name}}" successfully executed
+  successToast: Action "{{actions.BulkUpdateRoles.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onChange.name}}" has failed
+  errorToast: Action "{{actions.BulkUpdateRoles.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
 assigned: true
-index: 2
+selected: true
+configured: true
+parentId: '16939973606810.1657775421887091'
+index: 13

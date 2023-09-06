@@ -13,5 +13,5 @@ slots:
   - id: '16939905582890.8787489877243124'
     name: content
     children:
-      - select.yml
-      - publicJoinAccountServicesTable.yml
+      - slct_Account.yml
+      - tbl_AccountServices.yml

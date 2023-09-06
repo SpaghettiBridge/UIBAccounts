@@ -1,5 +1,5 @@
 id: '16939960853890.37173935591615903'
-name: onEdit
+name: UpdateServiceLink
 nameConfigured: true
 steps:
   - id: '16939960877940.9119374665110285'
@@ -17,7 +17,7 @@ steps:
           - column: id
             operation: '='
             value:
-              value: '{{ui.publicJoinAccountServicesTable.editedRow.data.id}}'
+              value: '{{ui.tbl_AccountServices.editedRow.data.id}}'
         valueType: custom
       - type: entity
         value:
@@ -27,24 +27,21 @@ steps:
               service_id:
                 value: >-
                   {{
-                  if(ui.publicJoinAccountServicesTable.editedRow.data.service_name.split("-").length
+                  if(ui.tbl_AccountServices.editedRow.data.service_name.split("-").length
                   ==5){return
-                  ui.publicJoinAccountServicesTable.editedRow.data.service_name}
-                  return
-                  ui.publicJoinAccountServicesTable.editedRow.data.service_id }}
+                  ui.tbl_AccountServices.editedRow.data.service_name} return
+                  ui.tbl_AccountServices.editedRow.data.service_id }}
               service_name:
                 value: >-
                   {{ 
-                  if(ui.publicJoinAccountServicesTable.editedRow.data.service_name.split("-").length
-                  ==5){return actions.loadPublicServices.data.filter(z=>z.id ==
-                  ui.publicJoinAccountServicesTable.editedRow.data.service_name)[0].service_name}
-                  return
-                  ui.publicJoinAccountServicesTable.editedRow.data.service_name 
-                  }}
+                  if(ui.tbl_AccountServices.editedRow.data.service_name.split("-").length
+                  ==5){return actions.FindAllServices.data.filter(z=>z.id ==
+                  ui.tbl_AccountServices.editedRow.data.service_name)[0].service_name}
+                  return ui.tbl_AccountServices.editedRow.data.service_name  }}
               name:
-                value: '{{ui.publicJoinAccountServicesTable.editedRow.data.name}}'
+                value: '{{ui.tbl_AccountServices.editedRow.data.name}}'
               user_role:
-                value: '{{ui.publicJoinAccountServicesTable.editedRow.data.user_role}}'
+                value: '{{ui.tbl_AccountServices.editedRow.data.user_role}}'
             custom: ''
         valueType: custom
       - type: replace
@@ -76,16 +73,22 @@ parentPageId: '1'
 folder: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.onEdit.name}}"?
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.UpdateServiceLink.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.onEdit.name}}" successfully executed
+  successToast: Action "{{actions.UpdateServiceLink.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onEdit.name}}" has failed
+  errorToast: Action "{{actions.UpdateServiceLink.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-index: 8
+assigned: true
+selected: true
+configured: true
+parentId: '16939973121030.1748892178114989'
+index: 11

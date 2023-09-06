@@ -26,7 +26,7 @@ properties:
       ]
     withData: false
   data: >+
-    {{actions.loadPublicServices.data.filter(x=> ui.slct_Service.value.includes(
+    {{actions.FindAllServices.data.filter(x=> ui.slct_Service.value.includes(
     x.id))}}
 
   name: tbl_refRoles
@@ -36,7 +36,7 @@ properties:
   title: Referral roles for each service
   showLoading:
     withData: true
-    dataValue: '{{actions.loadPublicServices.loading}}'
+    dataValue: '{{actions.FindAllServices.loading}}'
     value: false
   __UIBAKERY__SHOW__CONDITION__CODE__: '{{ui.slct_apps.value.includes("Referrals")}}'
   showClearSelection:

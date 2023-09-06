@@ -14,11 +14,11 @@ slots:
     name: content
     children:
       - slct_Service.yml
-      - button.yml
+      - btn_CreateAcc.yml
       - slct_apps.yml
       - ipt_FirstName.yml
       - ipt_LastName.yml
       - ipt_Email.yml
       - tbl_refRoles.yml
       - slct_bulkRoles.yml
-      - button2.yml
+      - btn_BulkUpdate.yml

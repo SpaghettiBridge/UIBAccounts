@@ -1,13 +1,13 @@
-id: '16939905837010.2474425099039621'
+id: '16939949837920.5686356900845615'
 definitionId: selectWithAtomics
-parentSlotId: '16939905582890.17628723685861258'
+parentSlotId: '16939905582890.8787489877243124'
 styles:
   xl:
     gridItem:
       x: 0
-      y: 4
-      w: 11
-      h: 3
+      y: 0
+      w: 10
+      h: 2
   xs:
     gridItem:
       x: 0
@@ -24,37 +24,44 @@ properties:
         title: ''
         __UIBAKERY__SYSTEM_ID__: '2'
     dataValue: >-
-      {{actions.loadPublicServices.data.map(x=>{return
-      {title:x.service_name,value:x.id} })}}
+      {{actions.FindAllAccounts.data.map(x=>{return {title:x.name,value:x.id}
+      })}}
     withData: true
-  name: slct_Service
+  name: slct_Account
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
   optionValueKey: value
   labelConfig:
-    text: Services
-    position: vertical
+    text: Account
+    position: horizontal
     align: left
-  multi: true
-actions: {}
+actions:
+  selectChange:
+    - action: '16939950514870.5376450029828428'
+      paramCode: ''
+      blockPageLoad: false
+      index: 0
+  init: []
+  focusEvent: []
+  blurEvent: []
 index: 0
 slots:
-  - id: '16939905837010.48192428025512357'
+  - id: '16939949837930.680290212251913'
     name: optionViewTypes
     children:
-      - id: '16939905837370.6419648992876299'
+      - id: '16939950264100.17737555417571804'
         definitionId: atomicString
+        parentSlotId: '16939949837930.680290212251913'
         styles:
           xl:
             visible: true
         properties:
-          name: atomicString
+          name: atomicString10
           prop: title
           primaryKey: false
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-        parentSlotId: '16939905837010.48192428025512357'
-        index: 1
+        index: 0
         slots: []

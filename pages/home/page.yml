@@ -24,5 +24,5 @@ slots:
             name: content
             bindings: {}
             children:
-              - components/tabs/tabs.yml
+              - components/tbs_View_Create_Update/tbs_View_Create_Update.yml
               - components/jsonViewer.yml

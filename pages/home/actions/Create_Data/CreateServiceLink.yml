@@ -1,10 +1,10 @@
-id: '16939950514870.5376450029828428'
-name: loadPublicJoinAccountServices
+id: '16939939589040.5464394845783873'
+name: CreateServiceLink
 nameConfigured: true
 steps:
-  - id: '16939950564120.36239703375922216'
-    type: LOAD_COLLECTION
-    name: load
+  - id: '16939939612580.1871088077558467'
+    type: CREATE_ENTITY
+    name: create
     params:
       - type: datasourceId
         value: Supabase Bridgelink Apps Database
@@ -12,28 +12,22 @@ steps:
       - type: resourceId
         value: public.join_account_services
         valueType: string
-      - type: filters
+      - type: entity
         value:
-          - column: account_id
-            operation: '='
-            value:
-              value: '{{ui.select.value}}'
-        valueType: custom
-      - type: ordering
-        value:
-          limit:
-            value: 1000
-          offset:
-            value: ''
-          orderBy:
-            value: ''
-          orderDirection:
-            value: asc
-        valueType: custom
-      - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+          mode: structured
+          valueByMode:
+            structured:
+              account_id:
+                value: '{{params.accid}}'
+              service_id:
+                value: '{{params.serviceid}}'
+              service_name:
+                value: '{{params.servname}}'
+              name:
+                value: '{{params.name}}'
+              user_role:
+                value: '{{params.role}}'
+            custom: ''
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -55,26 +49,24 @@ mode: manual
 modeConfigured: false
 parentPageId: '1'
 folder: false
-parentId: null
 config:
   shouldConfirm: false
   confirmMessage: >-
     Are you sure you'd like to proceed with
-    "{{actions.loadPublicJoinAccountServices.name}}"?
+    "{{actions.CreateServiceLink.name}}"?
   showSuccessToast: false
-  successToast: >-
-    Action "{{actions.loadPublicJoinAccountServices.name}}" successfully
-    executed
+  successToast: Action "{{actions.CreateServiceLink.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.loadPublicJoinAccountServices.name}}" has failed
+  errorToast: Action "{{actions.CreateServiceLink.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-assigned: false
+assigned: true
 selected: true
 configured: true
-index: 5
+parentId: '16939972929790.9691118555998752'
+index: 1

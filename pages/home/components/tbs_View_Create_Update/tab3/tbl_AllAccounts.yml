@@ -25,15 +25,15 @@ properties:
         { prop: 'email', type: 'link' },
       ]
     withData: false
-  data: '{{actions.loadPublicAccounts.data}}'
-  name: publicAccountsTable
+  data: '{{actions.FindAllAccounts.data}}'
+  name: tbl_AllAccounts
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
   title: Accounts
   showLoading:
     withData: true
-    dataValue: '{{actions.loadPublicAccounts.loading}}'
+    dataValue: '{{actions.FindAllAccounts.loading}}'
     value: false
   rowVariation: dense
   limit: '14'

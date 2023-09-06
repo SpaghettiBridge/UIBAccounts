@@ -26,7 +26,7 @@ properties:
       - title: Head Teacher
         value: Head Teacher
         __UIBAKERY__SYSTEM_ID__: '16939930933060.4651939892172172'
-    dataValue: '{{actions.loadPublicServices.data}}'
+    dataValue: '{{actions.FindAllServices.data}}'
     withData: false
   name: slct_bulkRoles
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:

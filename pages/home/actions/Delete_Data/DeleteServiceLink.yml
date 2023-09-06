@@ -1,5 +1,5 @@
 id: '16939960222170.6965706449509077'
-name: onDelete
+name: DeleteServiceLink
 nameConfigured: true
 steps:
   - id: '16939960251210.04219206719854074'
@@ -17,7 +17,7 @@ steps:
           - column: id
             operation: '='
             value:
-              value: '{{ui.publicJoinAccountServicesTable.deletedRow.data.id}}'
+              value: '{{ui.tbl_AccountServices.deletedRow.data.id}}'
         valueType: custom
       - type: bulk
         value: false
@@ -45,16 +45,22 @@ parentPageId: '1'
 folder: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.onDelete.name}}"?
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.DeleteServiceLink.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.onDelete.name}}" successfully executed
+  successToast: Action "{{actions.DeleteServiceLink.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.onDelete.name}}" has failed
+  errorToast: Action "{{actions.DeleteServiceLink.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-index: 7
+assigned: true
+selected: true
+configured: true
+parentId: '16939973103400.03593215707903363'
+index: 9

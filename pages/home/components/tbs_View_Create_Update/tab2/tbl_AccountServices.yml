@@ -26,20 +26,20 @@ properties:
       ]
     withData: false
   data: >-
-    {{if(ui.select.value != ""){return
-    actions.loadPublicJoinAccountServices.data} }}
-  name: publicJoinAccountServicesTable
+    {{if(ui.slct_Account.value != ""){return
+    actions.findIndividualAccountServices.data} }}
+  name: tbl_AccountServices
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
   title: Account services
   showLoading:
     withData: true
-    dataValue: '{{actions.loadPublicJoinAccountServices.loading}}'
+    dataValue: '{{actions.findIndividualAccountServices.loading}}'
     value: false
   showAddAction:
     value: true
-    dataValue: '{{ui.select.value != ""}}'
+    dataValue: '{{ui.slct_Account.value != ""}}'
     withData: true
   showEditAction:
     value: true
@@ -209,16 +209,16 @@ slots:
                 color: success
                 __UIBAKERY__SYSTEM_ID__: '16939952679670.8802399438719337'
             dataValue: >-
-              {{actions.loadPublicServices.data.filter(x=>
-              !ui.publicJoinAccountServicesTable.value.map(g=>
-              g.service_id).includes( x.id)).map(x=>{return
-              {title:x.service_name,value:x.id} })}}
+              {{actions.FindAllServices.data.filter(x=>
+              !ui.tbl_AccountServices.value.map(g=> g.service_id).includes(
+              x.id)).map(x=>{return {title:x.service_name,value:x.id} })}}
             withData: true
           viewTooltip: ''
           fieldTooltip: >-
             {{"Current Value: "+
-            ui.publicJoinAccountServicesTable.selectedRow.data.service_name}}
+            ui.tbl_AccountServices.selectedRow.data.service_name}}
         index: 3
+        actions: {}
         slots: []
       - id: '16939950840760.31837788487243124'
         definitionId: atomicSelect

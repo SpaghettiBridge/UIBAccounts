@@ -1,8 +1,8 @@
-id: '16939907045040.452679144102216'
-name: loadPublicAccounts
+id: '16939910750440.7727719153379322'
+name: FindAllServices
 nameConfigured: true
 steps:
-  - id: '16939907070080.9076426590845605'
+  - id: '16939910773340.43957085103241855'
     type: LOAD_COLLECTION
     name: load
     params:
@@ -10,7 +10,7 @@ steps:
         value: Supabase Bridgelink Apps Database
         valueType: string
       - type: resourceId
-        value: public.accounts
+        value: public.services
         valueType: string
       - type: filters
         value: []
@@ -22,7 +22,7 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: name
+            value: service_name
           orderDirection:
             value: asc
         valueType: custom
@@ -46,26 +46,27 @@ steps:
     level: 0
     fallthroughError: false
     isChanged: true
-singleStep: true
+singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
 folder: false
 config:
   shouldConfirm: false
-  confirmMessage: >-
-    Are you sure you'd like to proceed with
-    "{{actions.loadPublicAccounts.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.FindAllServices.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.loadPublicAccounts.name}}" successfully executed
+  successToast: Action "{{actions.FindAllServices.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.loadPublicAccounts.name}}" has failed
+  errorToast: Action "{{actions.FindAllServices.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
 assigned: false
-index: 0
+selected: true
+configured: true
+parentId: '16939972753810.5077860573161239'
+index: 5

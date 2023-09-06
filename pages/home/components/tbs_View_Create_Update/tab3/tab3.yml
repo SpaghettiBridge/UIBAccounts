@@ -14,3 +14,4 @@ slots:
     name: content
     children:
       - tbl_AllAccounts.yml
+      - crd_AccDisplay/crd_AccDisplay.yml

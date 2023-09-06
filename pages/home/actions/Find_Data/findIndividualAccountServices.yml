@@ -17,7 +17,10 @@ steps:
           - column: account_id
             operation: '='
             value:
-              value: '{{ui.slct_Account.value}}'
+              value: >-
+                {{if(ui.slct_Account.value != ""){return
+                ui.slct_Account.value}return
+                ui.tbl_AllAccounts.selectedRow.data.id}}
         valueType: custom
       - type: ordering
         value:

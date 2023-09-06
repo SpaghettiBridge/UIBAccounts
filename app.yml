@@ -1,4 +1,10 @@
-storeItemList: []
+storeItemList:
+  - id: '16939984552930.024336758655781443'
+    name: SelectedTag
+    value: ''
+    valueType: string
+    initialValue: ''
+    version: 1
 metadata:
   favicon: ''
   code: ''

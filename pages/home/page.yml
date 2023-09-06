@@ -25,4 +25,3 @@ slots:
             bindings: {}
             children:
               - components/tbs_View_Create_Update/tbs_View_Create_Update.yml
-              - components/jsonViewer.yml

@@ -1,0 +1,43 @@
+id: '16939984396140.6979713902043125'
+name: onTagClick
+nameConfigured: true
+steps:
+  - id: '16939984424570.32506339858941136'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '16939984552930.024336758655781443'
+        valueType: string
+      - type: value
+        value: '{{data}}'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+folder: false
+parentId: '16939973606810.1657775421887091'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onTagClick.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onTagClick.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onTagClick.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: true
+index: 16

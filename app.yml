@@ -1,0 +1,12 @@
+storeItemList: []
+metadata:
+  favicon: ''
+  code: ''
+  title: Accounts
+  description: ''
+appSettings:
+  properties:
+    defaultData: '{}'
+  actions: {}
+  gridVersion: 2
+internalType: project

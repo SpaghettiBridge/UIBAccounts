@@ -1,0 +1,36 @@
+id: '16939931312250.2903275771789384'
+name: onChange
+nameConfigured: true
+steps:
+  - id: '16939931331950.39392731351116606'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: "var tbl = ui.tbl_refRoles.value\n var updatedtbl = []\n \n tbl.forEach(item =>{\titem.Role = ui.slct_bulkRoles.value\n                    updatedtbl.push(item)\n                    } ) \nconsole.log(updatedtbl)\nui.tbl_refRoles.setData(updatedtbl)"
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+folder: false
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onChange.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onChange.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onChange.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: true
+index: 2

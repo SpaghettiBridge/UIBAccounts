@@ -1,0 +1,24 @@
+id: '16939905582890.16038412250113065'
+definitionId: tab
+styles: {}
+properties:
+  name: tab
+  title: Create
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+parentSlotId: '16939905582890.7324650524405196'
+index: 1
+slots:
+  - id: '16939905582890.17628723685861258'
+    name: content
+    children:
+      - slct_Service.yml
+      - button.yml
+      - slct_apps.yml
+      - ipt_FirstName.yml
+      - ipt_LastName.yml
+      - ipt_Email.yml
+      - tbl_refRoles.yml
+      - slct_bulkRoles.yml
+      - button2.yml

@@ -1,0 +1,196 @@
+id: '16939906837890.019117346824901738'
+definitionId: smartTable
+parentSlotId: '16939906741270.9189302057562756'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 37
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 16
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        { prop: 'id', type: 'number', primaryKey: true },
+       'full_name',
+        { prop: 'avatar', type: 'image' },
+        { prop: 'email', type: 'link' },
+      ]
+    withData: false
+  data: '{{actions.loadPublicAccounts.data}}'
+  name: publicAccountsTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Accounts
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadPublicAccounts.loading}}'
+    value: false
+  rowVariation: dense
+  limit: '14'
+  showFilter: true
+  showClearSelection:
+    value: false
+    dataValue: 'true'
+    withData: false
+actions: {}
+index: 0
+slots:
+  - id: '16939906837890.9711681132502012'
+    name: columns
+    children:
+      - id: '16939907105090.7976434806678234'
+        definitionId: atomicString
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString5
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 0
+        slots: []
+      - id: '16939907105090.5195052187645968'
+        definitionId: atomicString
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString6
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '60'
+          filter: true
+        index: 1
+        slots: []
+      - id: '16939907105090.3573917242214706'
+        definitionId: atomicString
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString7
+          prop: name_first
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '20'
+          filter: true
+          title: First name
+        index: 2
+        slots: []
+      - id: '16939907105090.8976290497433208'
+        definitionId: atomicString
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString8
+          prop: name_last
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '20'
+          filter: true
+          title: Last Name
+        index: 3
+        slots: []
+      - id: '16939907105090.9265348108096956'
+        definitionId: atomicString
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString9
+          prop: email
+          primaryKey: false
+          inputType: email
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '280'
+          filter: true
+        index: 4
+        slots: []
+      - id: '16939907105090.2875548020403249'
+        definitionId: atomicSelect
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect
+          prop: user_status
+          primaryKey: false
+          options:
+            value:
+              - value: active
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16939907105090.4972373804495225'
+              - value: Active
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '16939907105090.709452766876745'
+            dataValue: |-
+              [
+                {
+                  value: 'active',
+                  color: 'primary'
+                },
+                {
+                  value: 'Active',
+                  color: 'success'
+                }
+              ]
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '20'
+          filter: true
+        index: 5
+        slots: []
+      - id: '16939907105090.9814635549024566'
+        definitionId: atomicDateTime
+        parentSlotId: '16939906837890.9711681132502012'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicDateTime
+          prop: created_at
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 6
+        slots: []

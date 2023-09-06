@@ -1,0 +1,199 @@
+id: '16939921835730.010755910549511416'
+definitionId: smartTable
+parentSlotId: '16939905582890.17628723685861258'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 7
+      w: 11
+      h: 21
+  xs:
+    gridItem:
+      x: 0
+      y: 25
+      w: 24
+      h: 16
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        { prop: 'id', type: 'number', primaryKey: true },
+       'full_name',
+        { prop: 'avatar', type: 'image' },
+        { prop: 'email', type: 'link' },
+      ]
+    withData: false
+  data: >+
+    {{actions.loadPublicServices.data.filter(x=> ui.slct_Service.value.includes(
+    x.id))}}
+
+  name: tbl_refRoles
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Referral roles for each service
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadPublicServices.loading}}'
+    value: false
+  __UIBAKERY__SHOW__CONDITION__CODE__: '{{ui.slct_apps.value.includes("Referrals")}}'
+  showClearSelection:
+    value: false
+    dataValue: 'true'
+    withData: false
+  rowVariation: dense
+  limit: '8'
+actions: {}
+index: 6
+slots:
+  - id: '16939921835730.7036335216361838'
+    name: columns
+    children:
+      - id: '16939928107880.9811460347325089'
+        definitionId: atomicString
+        parentSlotId: '16939921835730.7036335216361838'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString4
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 0
+        slots: []
+      - id: '16939928107880.9405717621334075'
+        definitionId: atomicString
+        parentSlotId: '16939921835730.7036335216361838'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString11
+          prop: service_name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 1
+        slots: []
+      - id: '16939928107880.5322195905512475'
+        definitionId: atomicString
+        parentSlotId: '16939921835730.7036335216361838'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString12
+          prop: location
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 2
+        slots: []
+      - id: '16939928107890.6248862068157113'
+        definitionId: atomicSelect
+        parentSlotId: '16939921835730.7036335216361838'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicSelect2
+          prop: status
+          primaryKey: false
+          options:
+            value:
+              - value: active
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16939928107880.4735127695873498'
+            dataValue: |-
+              [
+                {
+                  value: 'active',
+                  color: 'primary'
+                }
+              ]
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 3
+        slots: []
+      - id: '16939928107890.4828594463696634'
+        definitionId: atomicDateTime
+        parentSlotId: '16939921835730.7036335216361838'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicDateTime2
+          prop: created_at
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 4
+        slots: []
+      - id: '16939928107890.3159923201902375'
+        definitionId: atomicString
+        parentSlotId: '16939921835730.7036335216361838'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString13
+          prop: initials
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 5
+        slots: []
+      - id: '16939928437230.456243672271895'
+        definitionId: atomicSelect
+        parentSlotId: '16939921835730.7036335216361838'
+        styles: {}
+        properties:
+          name: atomicSelect3
+          prop: Role
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          options:
+            value:
+              - value: ''
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '16939928770480.5763457359123059'
+                title: No Role
+              - value: Admissions Lead
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '16939928617360.0499572317698469'
+              - value: Head Teacher
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '16939928734620.008325661351403335'
+            dataValue: '[]'
+            withData: false
+          editable: true
+        index: 6
+        slots: []

@@ -1,0 +1,29 @@
+id: '16939908903550.8622641782447267'
+definitionId: stringEdit
+parentSlotId: '16939905582890.17628723685861258'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 0
+      w: 12
+      h: 2
+  xs:
+    gridItem:
+      x: 0
+      y: 21
+      w: 24
+      h: 2
+properties:
+  name: ipt_Email
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelWidth: 0
+  labelConfig:
+    text: Email
+    position: horizontal
+    align: left
+actions: {}
+index: 5
+slots: []

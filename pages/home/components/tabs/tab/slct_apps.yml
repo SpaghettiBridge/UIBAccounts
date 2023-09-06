@@ -1,0 +1,71 @@
+id: '16939906150620.27661810651827246'
+definitionId: selectWithAtomics
+parentSlotId: '16939905582890.17628723685861258'
+styles:
+  xl:
+    gridItem:
+      x: 12
+      y: 2
+      w: 12
+      h: 3
+  xs:
+    gridItem:
+      x: 0
+      y: 8
+      w: 24
+      h: 3
+properties:
+  options:
+    value:
+      - value: Referrals
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '1'
+      - value: Project Management
+        title: ''
+        __UIBAKERY__SYSTEM_ID__: '2'
+      - title: Student Profiles
+        value: Student Profiles
+        __UIBAKERY__SYSTEM_ID__: '16939910127060.21789537320191998'
+    dataValue: |-
+      [
+        {
+          "value": "option_1",
+          "title": "Option 1"
+        },
+        {
+          "value": "option_2",
+          "title": "Option 2"
+        }
+      ]
+    withData: false
+  name: slct_apps
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  optionValueKey: value
+  labelConfig:
+    text: Applications
+    position: vertical
+    align: left
+  multi: true
+actions: {}
+index: 2
+slots:
+  - id: '16939906150620.8577653287798135'
+    name: optionViewTypes
+    children:
+      - id: '16939906150620.37754462273311096'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString2
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '16939906150620.8577653287798135'
+        index: 1
+        slots: []

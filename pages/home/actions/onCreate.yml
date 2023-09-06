@@ -1,0 +1,50 @@
+id: '16939951600040.2583658724205069'
+name: onCreate
+nameConfigured: true
+steps:
+  - id: '16939951724380.5060815797989022'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '16939939589040.5464394845783873'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: "  return { \n    \t\taccid: ui.select.value,\n        serviceid: ui.publicJoinAccountServicesTable.newRow.data.service_name,\n        servname:actions.loadPublicServices.data.filter(z=>z.id == ui.publicJoinAccountServicesTable.newRow.data.service_name )[0].service_name,\n        name:ui.publicJoinAccountServicesTable.newRow.data.name ,\n        role: ui.publicJoinAccountServicesTable.newRow.data.user_role\n       }"
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+folder: false
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onCreate.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onCreate.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onCreate.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+index: 6

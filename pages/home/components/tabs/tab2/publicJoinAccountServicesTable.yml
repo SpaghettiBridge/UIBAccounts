@@ -1,0 +1,249 @@
+id: '16939950422290.30488126729431864'
+definitionId: smartTable
+parentSlotId: '16939905582890.8787489877243124'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 2
+      w: 24
+      h: 27
+  xs:
+    gridItem:
+      x: 0
+      y: 2
+      w: 24
+      h: 16
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        { prop: 'id', type: 'number', primaryKey: true },
+       'full_name',
+        { prop: 'avatar', type: 'image' },
+        { prop: 'email', type: 'link' },
+      ]
+    withData: false
+  data: >-
+    {{if(ui.select.value != ""){return
+    actions.loadPublicJoinAccountServices.data} }}
+  name: publicJoinAccountServicesTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Account services
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadPublicJoinAccountServices.loading}}'
+    value: false
+  showAddAction:
+    value: true
+    dataValue: '{{ui.select.value != ""}}'
+    withData: true
+  showEditAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showDeleteAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showClearSelection:
+    value: false
+    dataValue: 'true'
+    withData: false
+actions:
+  smartTableCreate:
+    - action: '16939951600040.2583658724205069'
+      paramCode: ''
+      index: 0
+  smartTableDelete:
+    - action: '16939960222170.6965706449509077'
+      paramCode: ''
+      index: 1
+  smartTableEdit:
+    - action: '16939960853890.37173935591615903'
+      paramCode: ''
+      index: 2
+index: 1
+slots:
+  - id: '16939950422290.5750035209914974'
+    name: columns
+    children:
+      - id: '16939950840760.39362186357338147'
+        definitionId: atomicString
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString14
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 0
+        slots: []
+      - id: '16939950840760.09544974891207181'
+        definitionId: atomicString
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString15
+          prop: account_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 1
+        slots: []
+      - id: '16939950840760.9462097542162065'
+        definitionId: atomicString
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString18
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+          forceView: false
+          disabled:
+            value: false
+            dataValue: 'false'
+            withData: false
+        index: 4
+        slots: []
+      - id: '16939950840760.025249801127020355'
+        definitionId: atomicDateTime
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicDateTime3
+          prop: created_at
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        index: 6
+        slots: []
+      - id: '16939950840760.8036488719609431'
+        definitionId: atomicSelect
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect4
+          prop: user_role
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          width: 120
+          options:
+            value:
+              - value: ''
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '16939952447910.020055776704090977'
+                title: No Role
+              - value: Head Teacher
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16939952363680.5853893978356854'
+              - value: Admissions Lead
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '16939952380780.7122953480810728'
+            dataValue: |-
+              [
+                {
+                  value: 'Head Teacher',
+                  color: 'primary'
+                }
+              ]
+            withData: false
+        index: 5
+        slots: []
+      - id: '16939950840760.08389644165489929'
+        definitionId: atomicSelect
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect5
+          prop: service_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          width: 120
+          options:
+            value:
+              - value: Silver Bridge School
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16939952679670.1686621542109934'
+              - value: X Bridge School
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '16939952679670.8802399438719337'
+            dataValue: >-
+              {{actions.loadPublicServices.data.filter(x=>
+              !ui.publicJoinAccountServicesTable.value.map(g=>
+              g.service_id).includes( x.id)).map(x=>{return
+              {title:x.service_name,value:x.id} })}}
+            withData: true
+          viewTooltip: ''
+          fieldTooltip: >-
+            {{"Current Value: "+
+            ui.publicJoinAccountServicesTable.selectedRow.data.service_name}}
+        index: 3
+        slots: []
+      - id: '16939950840760.31837788487243124'
+        definitionId: atomicSelect
+        parentSlotId: '16939950422290.5750035209914974'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicSelect6
+          prop: service_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          width: 120
+          options:
+            value:
+              - value: da160c9d-6123-4c78-a04c-226d6b48e8af
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16939961815040.7267801783600092'
+              - value: 7b096f39-3e4b-4392-8a95-63635443c3b4
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '16939961815040.498059160061872'
+            dataValue: ''
+            withData: true
+        index: 2
+        slots: []

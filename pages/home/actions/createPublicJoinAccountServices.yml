@@ -1,0 +1,72 @@
+id: '16939939589040.5464394845783873'
+name: createPublicJoinAccountServices
+nameConfigured: true
+steps:
+  - id: '16939939612580.1871088077558467'
+    type: CREATE_ENTITY
+    name: create
+    params:
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
+        valueType: string
+      - type: resourceId
+        value: public.join_account_services
+        valueType: string
+      - type: entity
+        value:
+          mode: structured
+          valueByMode:
+            structured:
+              account_id:
+                value: '{{params.accid}}'
+              service_id:
+                value: '{{params.serviceid}}'
+              service_name:
+                value: '{{params.servname}}'
+              name:
+                value: '{{params.name}}'
+              user_role:
+                value: '{{params.role}}'
+            custom: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+folder: false
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.createPublicJoinAccountServices.name}}"?
+  showSuccessToast: false
+  successToast: >-
+    Action "{{actions.createPublicJoinAccountServices.name}}" successfully
+    executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.createPublicJoinAccountServices.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: false
+index: 4

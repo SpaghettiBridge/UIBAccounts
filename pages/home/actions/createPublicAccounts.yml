@@ -1,0 +1,150 @@
+id: '16939915598520.36986949053327467'
+name: createPublicAccounts
+nameConfigured: true
+steps:
+  - id: '16939915631520.32397042586401015'
+    type: CREATE_ENTITY
+    name: create
+    params:
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
+        valueType: string
+      - type: resourceId
+        value: public.accounts
+        valueType: string
+      - type: entity
+        value:
+          mode: structured
+          valueByMode:
+            structured:
+              name:
+                value: '{{ui.ipt_FirstName.value}} {{ui.ipt_LastName.value}}'
+              name_first:
+                value: '{{ui.ipt_FirstName.value}}'
+              name_last:
+                value: '{{ui.ipt_LastName.value}}'
+              email:
+                value: '{{ui.ipt_Email.value}}'
+              user_status:
+                value: Active
+            custom: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+  - id: '16939942456060.9882633487307189'
+    type: loopAction
+    name: loop
+    params:
+      - type: action
+        value: '16939939589040.5464394845783873'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customArray
+        value: "ui.tbl_refRoles.value.map(x=>{\n  return { \n    \t\taccid: steps.create.data.id,\n        serviceid: x.id,\n        servname: x.service_name,\n        name: ui.ipt_FirstName.value +\" \" +ui.ipt_LastName.value ,\n        role: x.Role\n       }\n})\n"
+        valueType: interpolatedValue
+      - type: iterationChunkSize
+        value: '3'
+        valueType: custom
+      - type: iterationChunkDelay
+        value: '300'
+        valueType: custom
+      - type: maxIterations
+        value: ''
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+      - type: executionMethod
+        value: sequential
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+    paused: false
+  - id: '16939946259730.8092868489376899'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: |-
+          {{ui.ipt_FirstName.reset()}}
+          {{ui.ipt_LastName.reset()}}
+          {{ui.ipt_Email.reset()}}
+          {{ui.slct_apps.reset()}}
+          {{ui.slct_Service.reset()}}
+          {{ui.slct_bulkRoles.reset()}}
+          {{ui.tbl_refRoles.setData()}}
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '16939948817260.7904989598146173'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '16939907045040.452679144102216'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: return {{data}};
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+folder: false
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.createPublicAccounts.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.createPublicAccounts.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.createPublicAccounts.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: false
+selected: true
+configured: true
+index: 3

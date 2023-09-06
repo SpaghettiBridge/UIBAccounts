@@ -23,4 +23,6 @@ slots:
           - id: '2'
             name: content
             bindings: {}
-            children: []
+            children:
+              - components/tabs/tabs.yml
+              - components/jsonViewer.yml

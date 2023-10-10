@@ -8,7 +8,8 @@ steps:
     params:
       - type: query
         value: >-
-          Select * from public.join_application_accounts
+          Select *, public.join_application_accounts.id as roleID from
+          public.join_application_accounts
 
           left join public.applications on public.applications.id =
           public.join_application_accounts.app_id
@@ -24,7 +25,8 @@ steps:
         mustSelectFirst: true
       - type: preparedQuery
         value: >-
-          Select * from public.join_application_accounts
+          Select *, public.join_application_accounts.id as roleID from
+          public.join_application_accounts
 
           left join public.applications on public.applications.id =
           public.join_application_accounts.app_id
@@ -75,4 +77,4 @@ config:
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-index: 9
+index: 12

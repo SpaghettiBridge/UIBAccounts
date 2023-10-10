@@ -1,8 +1,8 @@
-id: '16939939589040.5464394845783873'
-name: CreateServiceLink
+id: '16968667335040.6483763399542797'
+name: createPublicJoinApplicationAccounts
 nameConfigured: true
 steps:
-  - id: '16939939612580.1871088077558467'
+  - id: '16969312965530.14203765176616212'
     type: CREATE_ENTITY
     name: create
     params:
@@ -10,7 +10,7 @@ steps:
         value: Supabase Bridgelink Apps Database
         valueType: string
       - type: resourceId
-        value: public.join_account_services
+        value: public.join_application_accounts
         valueType: string
       - type: entity
         value:
@@ -18,15 +18,9 @@ steps:
           valueByMode:
             structured:
               account_id:
-                value: '{{params.accid}}'
-              service_id:
-                value: '{{params.serviceid}}'
-              service_name:
-                value: '{{params.servname}}'
-              name:
-                value: '{{params.name}}'
-              user_role:
-                value: '{{params.role}}'
+                value: '{{params.id}}'
+              app_id:
+                value: 14ef618f-a7cb-47ee-a2ac-a6ef894195fe
             custom: ''
         valueType: custom
       - type: customDatabaseName
@@ -47,26 +41,24 @@ steps:
 singleStep: false
 mode: manual
 modeConfigured: false
-parentPageId: '1'
 folder: false
+parentId: null
 config:
   shouldConfirm: false
   confirmMessage: >-
     Are you sure you'd like to proceed with
-    "{{actions.CreateServiceLink.name}}"?
+    "{{actions.createPublicJoinApplicationAccounts.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.CreateServiceLink.name}}" successfully executed
+  successToast: >-
+    Action "{{actions.createPublicJoinApplicationAccounts.name}}" successfully
+    executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.CreateServiceLink.name}}" has failed
+  errorToast: Action "{{actions.createPublicJoinApplicationAccounts.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
-  preserveStateOnPageChange: false
-assigned: true
-selected: true
-configured: true
-parentId: '16939972929790.9691118555998752'
-index: 3
+  preserveStateOnPageChange: true
+index: 1

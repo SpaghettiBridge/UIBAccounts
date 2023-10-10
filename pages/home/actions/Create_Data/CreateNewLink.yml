@@ -13,7 +13,7 @@ steps:
         value: false
         valueType: string
       - type: customParams
-        value: "  return { \n    \t\taccid: ui.select.value,\n        serviceid: ui.publicJoinAccountServicesTable.newRow.data.service_name,\n        servname:actions.loadPublicServices.data.filter(z=>z.id == ui.publicJoinAccountServicesTable.newRow.data.service_name )[0].service_name,\n        name:ui.publicJoinAccountServicesTable.newRow.data.name ,\n        role: ui.publicJoinAccountServicesTable.newRow.data.user_role\n       }"
+        value: "  return { \n    \t\taccid: ui.slct_Account.value,\n        serviceid: ui.tbl_AccountServices.newRow.data.service_name,\n        servname:actions.FindAllServices.data.filter(z=>z.id == ui.tbl_AccountServices.newRow.data.service_name )[0].service_name,\n        name:ui.tbl_AccountServices.newRow.data.name ,\n        role: ui.tbl_AccountServices.newRow.data.user_role\n       }"
         valueType: string
       - type: successMapper
         value: ''
@@ -51,4 +51,4 @@ assigned: true
 selected: true
 configured: true
 parentId: '16939972929790.9691118555998752'
-index: 2
+index: 4

@@ -7,13 +7,13 @@ styles:
       x: 0
       y: 0
       w: 11
-      h: 37
+      h: 185
   xs:
     gridItem:
       x: 0
       y: 0
       w: 24
-      h: 16
+      h: 80
 properties:
   dynamicColumns:
     value: []
@@ -39,9 +39,11 @@ properties:
   limit: '14'
   showFilter: true
   showClearSelection:
-    value: false
+    value: true
     dataValue: 'true'
     withData: false
+  selectedRowIndex: ''
+  rowBackgroundColor: ''
 actions:
   smartTableRowSelect:
     - action: '16939950514870.5376450029828428'

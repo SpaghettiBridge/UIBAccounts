@@ -1,0 +1,43 @@
+id: '16969450503680.3033365354274602'
+definitionId: modal
+parentSlotId: '16939979002410.3753169947062245'
+styles:
+  xl:
+    gridItem:
+      x: 18
+      y: 15
+      w: 6
+      h: 10
+  xs:
+    gridItem:
+      x: 0
+      y: 180
+      w: 24
+      h: 10
+properties:
+  name: modal
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  buttonText: Add New App Role
+actions:
+  close:
+    - action: '16969456653450.22396651612861151'
+      paramCode: ''
+      index: 0
+index: 6
+slots:
+  - id: '16969450503680.8494214540240437'
+    name: header
+    children:
+      - heading.yml
+  - id: '16969450503680.5407013159547431'
+    name: body
+    children:
+      - slct_Application.yml
+      - ipt_Role.yml
+      - button.yml
+      - text.yml
+  - id: '16969450503680.2788711097003336'
+    name: footer
+    children: []

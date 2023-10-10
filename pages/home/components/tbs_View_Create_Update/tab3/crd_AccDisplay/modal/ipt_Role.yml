@@ -1,29 +1,29 @@
-id: '16939908585320.5469153905116415'
+id: '16969452169120.46559900743990856'
 definitionId: stringEdit
-parentSlotId: '16939905582890.17628723685861258'
+parentSlotId: '16969450503680.5407013159547431'
 styles:
   xl:
     gridItem:
       x: 0
-      y: 15
-      w: 11
+      y: 10
+      w: 20
       h: 10
   xs:
     gridItem:
       x: 0
-      y: 95
+      y: 10
       w: 24
       h: 10
 properties:
-  name: ipt_LastName
+  name: ipt_Role
   __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
     - xl
     - xs
-  labelWidth: 0
+  labelWidth: 15
   labelConfig:
-    text: Last Name
+    text: Role
     position: horizontal
     align: left
 actions: {}
-index: 4
+index: 1
 slots: []

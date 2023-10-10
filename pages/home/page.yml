@@ -25,3 +25,5 @@ slots:
             bindings: {}
             children:
               - components/tbs_View_Create_Update/tbs_View_Create_Update.yml
+              - components/customComponent.yml
+              - components/customComponent3.yml

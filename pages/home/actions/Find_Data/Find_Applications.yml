@@ -1,20 +1,23 @@
-id: '16939907045040.452679144102216'
-name: FindAllAccounts
+id: '16969451423520.5741608327393235'
+name: Find_Applications
 nameConfigured: true
 steps:
-  - id: '16939907070080.9076426590845605'
+  - id: '16969451446430.5413871456466512'
     type: LOAD_COLLECTION
     name: load
     params:
       - type: datasourceId
         value: Supabase Bridgelink Apps Database
-        valueType: string
+        valueType: custom
+        mustSelectFirst: true
       - type: resourceId
-        value: public.accounts
-        valueType: string
+        value: public.applications
+        valueType: custom
+        mustSelectFirst: true
       - type: filters
         value: []
         valueType: custom
+        interpolationType: string
       - type: ordering
         value:
           limit:
@@ -22,51 +25,55 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: name
+            value: ''
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
       - type: successMapper
         value: ''
         valueType: interpolatedValue
+        interpolationType: code
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
+        interpolationType: code
       - type: mapperEnabled
         value: false
         valueType: custom
     level: 0
     fallthroughError: false
-    isChanged: true
-singleStep: true
+    isChanged: false
+singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
 folder: false
+parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.FindAllAccounts.name}}"?
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.Find_Applications.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.FindAllAccounts.name}}" successfully executed
+  successToast: Action "{{actions.Find_Applications.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.FindAllAccounts.name}}" has failed
+  errorToast: Action "{{actions.Find_Applications.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-assigned: true
+assigned: false
 selected: true
 configured: true
-parentId: '16939972753810.5077860573161239'
-index: 10
+index: 13

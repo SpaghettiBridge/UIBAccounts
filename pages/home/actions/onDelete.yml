@@ -1,36 +1,27 @@
-id: '16939907045040.452679144102216'
-name: FindAllAccounts
+id: '16969464320270.9052162605805694'
+name: onDelete
 nameConfigured: true
 steps:
-  - id: '16939907070080.9076426590845605'
-    type: LOAD_COLLECTION
-    name: load
+  - id: '16969464360650.8570591597640536'
+    type: DELETE_ENTITY
+    name: delete
     params:
       - type: datasourceId
         value: Supabase Bridgelink Apps Database
         valueType: string
       - type: resourceId
-        value: public.accounts
+        value: public.join_application_accounts
         valueType: string
-      - type: filters
-        value: []
-        valueType: custom
-      - type: ordering
+      - type: filter
         value:
-          limit:
-            value: 1000
-          offset:
-            value: ''
-          orderBy:
-            value: name
-          orderDirection:
-            value: asc
+          - column: id
+            operation: '='
+            value:
+              value: '{{ui.tbl_GenApproles.deletedRow.data.roleid}}'
         valueType: custom
-      - type: additionalParams
-        value:
-          - name: ''
-            value: ''
-        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -48,25 +39,21 @@ steps:
     isChanged: true
 singleStep: true
 mode: manual
-modeConfigured: false
+modeConfigured: true
 parentPageId: '1'
 folder: false
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.FindAllAccounts.name}}"?
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onDelete.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.FindAllAccounts.name}}" successfully executed
+  successToast: Action "{{actions.onDelete.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.FindAllAccounts.name}}" has failed
+  errorToast: Action "{{actions.onDelete.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
-assigned: true
-selected: true
-configured: true
-parentId: '16939972753810.5077860573161239'
-index: 10
+index: 25

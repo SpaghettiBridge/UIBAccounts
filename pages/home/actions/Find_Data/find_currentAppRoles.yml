@@ -1,8 +1,8 @@
-id: '16939907045040.452679144102216'
-name: FindAllAccounts
+id: '16969457979160.5293120911869511'
+name: find_currentAppRoles
 nameConfigured: true
 steps:
-  - id: '16939907070080.9076426590845605'
+  - id: '16969458023550.23340519947313632'
     type: LOAD_COLLECTION
     name: load
     params:
@@ -10,10 +10,14 @@ steps:
         value: Supabase Bridgelink Apps Database
         valueType: string
       - type: resourceId
-        value: public.accounts
+        value: public.join_application_accounts
         valueType: string
       - type: filters
-        value: []
+        value:
+          - column: app_id
+            operation: '='
+            value:
+              value: '{{ui.slct_Application.value}}'
         valueType: custom
       - type: ordering
         value:
@@ -22,7 +26,7 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: name
+            value: ''
           orderDirection:
             value: asc
         valueType: custom
@@ -35,31 +39,41 @@ steps:
         value: ''
         valueType: interpolatedValue
       - type: successMapper
-        value: ''
+        value: |-
+          let desired_output = (employees_details) => {
+              let unique_values = [
+                  ...new Set(employees_details.map((element) => element.role)),
+              ];
+              return unique_values;
+          };
+          return desired_output(data)
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
       - type: mapperEnabled
-        value: false
+        value: true
         valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
-singleStep: true
+singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
 folder: false
+parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
-  confirmMessage: Are you sure you'd like to proceed with "{{actions.FindAllAccounts.name}}"?
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.find_currentAppRoles.name}}"?
   showSuccessToast: false
-  successToast: Action "{{actions.FindAllAccounts.name}}" successfully executed
+  successToast: Action "{{actions.find_currentAppRoles.name}}" successfully executed
   successToastDuration: '3000'
   successToastHideByClick: false
   showErrorToast: true
-  errorToast: Action "{{actions.FindAllAccounts.name}}" has failed
+  errorToast: Action "{{actions.find_currentAppRoles.name}}" has failed
   errorToastDuration: '3000'
   errorToastHideByClick: false
   delay: '0'
@@ -68,5 +82,4 @@ config:
 assigned: true
 selected: true
 configured: true
-parentId: '16939972753810.5077860573161239'
-index: 10
+index: 14

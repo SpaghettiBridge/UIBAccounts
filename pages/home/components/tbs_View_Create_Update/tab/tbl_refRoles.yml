@@ -5,15 +5,15 @@ styles:
   xl:
     gridItem:
       x: 0
-      y: 7
+      y: 40
       w: 11
-      h: 21
+      h: 105
   xs:
     gridItem:
       x: 0
-      y: 25
+      y: 125
       w: 24
-      h: 16
+      h: 80
 properties:
   dynamicColumns:
     value: []

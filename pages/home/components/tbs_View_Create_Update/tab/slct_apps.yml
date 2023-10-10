@@ -5,15 +5,15 @@ styles:
   xl:
     gridItem:
       x: 12
-      y: 2
+      y: 10
       w: 12
-      h: 3
+      h: 15
   xs:
     gridItem:
       x: 0
-      y: 8
+      y: 40
       w: 24
-      h: 3
+      h: 15
 properties:
   options:
     value:

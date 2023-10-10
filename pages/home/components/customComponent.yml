@@ -1,0 +1,31 @@
+id: '16940081882000.5298945637478407'
+definitionId: customComponentUnsafe
+parentSlotId: '2'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 205
+      w: 5
+      h: 30
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 1
+      h: 5
+properties:
+  data: '{{actions.FindAllServices.data}}'
+  template: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Button to Dropdown</title>\n    <style>\n        /* Base styles for the button */\n        .dropdown-button {\n          min-width: 50px;\n            display: inline-block;\n            padding: 10px 20px;\n            background-color: #007bff;\n            color: #fff;\n            border: none;\n            cursor: pointer;\n        }\n\n        /* Styles for the dropdown container (hidden by default) */\n        .dropdown-container {\n            display: none;\n            position: absolute;\n            background-color: #f1f1f1;\n            min-width: 150px;\n            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n            z-index: 1;\n        }\n\n        /* Style for the dropdown options */\n        .dropdown-option {\n            padding: 10px;\n            text-decoration: none;\n            display: block;\n            color: #333;\n            transition: background-color 0.3s;\n        }\n\n        /* Hover effect for dropdown options */\n        .dropdown-option:hover {\n            background-color: #ddd;\n        }\n\n        /* Show the dropdown container when the button or the container itself is hovered */\n        .dropdown-button:hover + .dropdown-container,\n        .dropdown-container:hover {\n            display: block;          \n        }\n    </style>\n</head>\n<body>\n    <!-- Button that transforms into a dropdown on hover -->\n    <button class=\"dropdown-button\">Hover Me</button>\n    <!-- Dropdown container with options -->\n    <div class=\"dropdown-container\">\n        <a type=\"option\" class=\"dropdown-option\">Option 1</a>\n        <a type=\"option\" class=\"dropdown-option\">Option 2</a>\n        <a type=\"option\" class=\"dropdown-option\">Option 3</a>\n    </div>\n</body>\n</html>\n<script>\n\n  UB.onData(data => {\n \t\tvar options = data.map(x=>{ let temp = document.createElement(\"a\");\n                              temp.className = \"dropdown-option\"\n                               temp.type = \"option\"\n                               temp.innerhtml\n                               return temp\n                              })\n  console.log(options  )\n  })\n    function option1Clicked() {\n        UB.updateValue(1);\n        UB.triggerEvent(\"Open_Modal\");\n      }\n\n      var addNeed = document.querySelectorAll(\"a[type]\");\n      addNeed.forEach(item=> item.addEventListener(\"click\", option1Clicked))\n</script>"
+  name: customComponent
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  __UIBAKERY__SHOW__CONDITION__CODE__: 'false'
+index: 1
+actions:
+  triggerEvent:
+    - action: '16940084254480.17707093871770985'
+      paramCode: ''
+      index: 0
+slots: []

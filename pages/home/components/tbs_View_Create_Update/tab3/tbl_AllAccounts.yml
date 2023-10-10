@@ -6,14 +6,14 @@ styles:
     gridItem:
       x: 0
       y: 0
-      w: 24
-      h: 37
+      w: 11
+      h: 185
   xs:
     gridItem:
       x: 0
       y: 0
       w: 24
-      h: 16
+      h: 80
 properties:
   dynamicColumns:
     value: []
@@ -39,10 +39,35 @@ properties:
   limit: '14'
   showFilter: true
   showClearSelection:
-    value: false
+    value: true
     dataValue: 'true'
     withData: false
-actions: {}
+  selectedRowIndex: ''
+  rowBackgroundColor: ''
+actions:
+  smartTableRowSelect:
+    - action: '16939950514870.5376450029828428'
+      paramCode: ''
+      blockPageLoad: false
+      index: 0
+    - action: '16939989403350.7144306721926348'
+      paramCode: ''
+      blockPageLoad: false
+      index: 1
+    - action: '16939995383410.7737130914147108'
+      paramCode: ''
+      blockPageLoad: false
+      index: 2
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowClick: []
+  smartTablePageSelect: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  smartTableReload: []
 index: 0
 slots:
   - id: '16939906837890.9711681132502012'
@@ -132,7 +157,7 @@ slots:
           __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
             - xl
             - xs
-          width: '280'
+          width: '120'
           filter: true
         index: 4
         slots: []

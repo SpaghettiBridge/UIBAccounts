@@ -7,13 +7,13 @@ styles:
       x: 0
       y: 0
       w: 10
-      h: 2
+      h: 10
   xs:
     gridItem:
       x: 0
       y: 0
       w: 24
-      h: 2
+      h: 10
 properties:
   options:
     value:

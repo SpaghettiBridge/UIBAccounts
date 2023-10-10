@@ -1,0 +1,185 @@
+id: '16939996320970.8863994349403217'
+definitionId: smartTable
+parentSlotId: '16939979002410.3753169947062245'
+styles:
+  xl:
+    gridItem:
+      x: 0
+      y: 25
+      w: 24
+      h: 80
+  xs:
+    gridItem:
+      x: 0
+      y: 100
+      w: 24
+      h: 80
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        { prop: 'id', type: 'number', primaryKey: true },
+       'full_name',
+        { prop: 'avatar', type: 'image' },
+        { prop: 'email', type: 'link' },
+      ]
+    withData: false
+  data: '{{actions.newAction2.data}}'
+  name: tbl_GenApproles
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: General Application Roles
+  showLoading:
+    withData: true
+    dataValue: '{{actions.newAction2.loading}}'
+    value: false
+  showEditAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showAddAction:
+    value: false
+    dataValue: '{{ui.tbl_AllAccounts.selectedRow.data.name}}'
+    withData: false
+  showDeleteAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions:
+  smartTableEdit:
+    - action: '16939999997900.924361207001483'
+      paramCode: ''
+      index: 0
+  smartTableDelete:
+    - action: '16969464320270.9052162605805694'
+      paramCode: ''
+      index: 1
+index: 5
+slots:
+  - id: '16939996320970.6237916295629691'
+    name: columns
+    children:
+      - id: '16939996321910.9879551803455606'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString21
+          prop: id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        parentSlotId: '16939996320970.6237916295629691'
+        index: 0
+        slots: []
+      - id: '16939996321910.6658408411566079'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString28
+          prop: account_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        parentSlotId: '16939996320970.6237916295629691'
+        index: 1
+        slots: []
+      - id: '16939996321910.520440663845823'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString29
+          prop: app_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        parentSlotId: '16939996320970.6237916295629691'
+        index: 2
+        slots: []
+      - id: '16939996321910.594054422335758'
+        definitionId: atomicDateTime
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicDateTime7
+          prop: created_at
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        parentSlotId: '16939996320970.6237916295629691'
+        index: 3
+        slots: []
+      - id: '16939996321910.0115237448994574'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString30
+          prop: role
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+        parentSlotId: '16939996320970.6237916295629691'
+        index: 5
+        slots: []
+      - id: '16939996321910.5187523379064971'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString31
+          prop: app_name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          filter: true
+          forceView: true
+        parentSlotId: '16939996320970.6237916295629691'
+        index: 4
+        slots: []
+      - id: '16940003680680.42729959109348337'
+        definitionId: atomicButton
+        parentSlotId: '16939996320970.6237916295629691'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicButton
+          text: '{{value}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          prop: roleid
+        index: 6
+        slots: []

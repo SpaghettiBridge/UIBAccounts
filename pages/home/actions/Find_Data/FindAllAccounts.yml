@@ -2,12 +2,12 @@ id: '16939907045040.452679144102216'
 name: FindAllAccounts
 nameConfigured: true
 steps:
-  - id: '16939907070080.9076426590845605'
+  - id: '16986648901610.3694879558149844'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.accounts
@@ -22,15 +22,15 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: name
+            value: ''
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -50,7 +50,6 @@ singleStep: true
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: Are you sure you'd like to proceed with "{{actions.FindAllAccounts.name}}"?
@@ -69,4 +68,5 @@ assigned: true
 selected: true
 configured: true
 parentId: '16939972753810.5077860573161239'
+kind: workflow
 index: 10

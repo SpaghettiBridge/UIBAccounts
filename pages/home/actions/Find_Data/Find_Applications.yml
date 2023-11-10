@@ -2,12 +2,12 @@ id: '16969451423520.5741608327393235'
 name: Find_Applications
 nameConfigured: true
 steps:
-  - id: '16969451446430.5413871456466512'
+  - id: '16986649235350.42347166478411147'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: custom
         mustSelectFirst: true
       - type: resourceId
@@ -55,7 +55,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
@@ -76,4 +75,5 @@ config:
 assigned: false
 selected: true
 configured: true
+kind: workflow
 index: 13

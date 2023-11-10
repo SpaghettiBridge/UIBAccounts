@@ -2,12 +2,12 @@ id: '16969464320270.9052162605805694'
 name: onDelete
 nameConfigured: true
 steps:
-  - id: '16969464360650.8570591597640536'
+  - id: '16986649836470.34823064612803534'
     type: DELETE_ENTITY
-    name: delete
+    name: delete2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_application_accounts
@@ -21,7 +21,7 @@ steps:
         valueType: custom
       - type: bulk
         value: false
-        valueType: string
+        valueType: interpolatedValue
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -41,7 +41,6 @@ singleStep: true
 mode: manual
 modeConfigured: true
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: Are you sure you'd like to proceed with "{{actions.onDelete.name}}"?
@@ -56,4 +55,5 @@ config:
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
+kind: workflow
 index: 25

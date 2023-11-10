@@ -13,7 +13,6 @@ singleStep: true
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: true
 config:
   shouldConfirm: false
   confirmMessage: Are you sure you'd like to proceed with "{{actions.Create_Data.name}}"?
@@ -30,4 +29,5 @@ config:
   preserveStateOnPageChange: false
 assigned: false
 selected: false
+kind: folder
 index: 2

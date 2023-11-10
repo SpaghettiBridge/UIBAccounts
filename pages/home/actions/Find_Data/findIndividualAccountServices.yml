@@ -2,12 +2,12 @@ id: '16939950514870.5376450029828428'
 name: findIndividualAccountServices
 nameConfigured: true
 steps:
-  - id: '16939950564120.36239703375922216'
+  - id: '16986648803300.672724136629774'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_account_services
@@ -33,11 +33,11 @@ steps:
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -57,7 +57,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
@@ -80,4 +79,5 @@ config:
 assigned: true
 selected: true
 configured: true
+kind: workflow
 index: 9

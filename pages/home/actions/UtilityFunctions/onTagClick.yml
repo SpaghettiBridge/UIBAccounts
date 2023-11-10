@@ -23,7 +23,6 @@ singleStep: true
 mode: manual
 modeConfigured: true
 parentPageId: '1'
-folder: false
 parentId: '16939973606810.1657775421887091'
 config:
   shouldConfirm: false
@@ -40,4 +39,5 @@ config:
   runWhenFirstReferenced: true
   preserveStateOnPageChange: false
 assigned: true
+kind: workflow
 index: 21

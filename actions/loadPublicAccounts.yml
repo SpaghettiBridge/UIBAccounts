@@ -2,12 +2,12 @@ id: '16968667230690.6781944769343413'
 name: loadPublicAccounts
 nameConfigured: true
 steps:
-  - id: '16969309515580.011255063619169503'
+  - id: '16986650051230.9019140095944167'
     type: LOAD_COLLECTION
-    name: load2
+    name: load3
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_application_accounts
@@ -30,11 +30,11 @@ steps:
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -50,12 +50,12 @@ steps:
     level: 0
     fallthroughError: false
     isChanged: true
-  - id: '16969309294210.3662439424017627'
+  - id: '16986650150610.6030967359389483'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.accounts
@@ -74,11 +74,11 @@ steps:
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -133,7 +133,6 @@ steps:
 singleStep: false
 mode: manual
 modeConfigured: false
-folder: false
 parentId: null
 config:
   shouldConfirm: false
@@ -151,4 +150,5 @@ config:
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: true
+kind: workflow
 index: 0

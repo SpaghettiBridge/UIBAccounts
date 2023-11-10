@@ -2,12 +2,12 @@ id: '16968667335040.6483763399542797'
 name: createPublicJoinApplicationAccounts
 nameConfigured: true
 steps:
-  - id: '16969312965530.14203765176616212'
+  - id: '16986649949940.7357577997366456'
     type: CREATE_ENTITY
-    name: create
+    name: create2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_application_accounts
@@ -41,7 +41,6 @@ steps:
 singleStep: false
 mode: manual
 modeConfigured: false
-folder: false
 parentId: null
 config:
   shouldConfirm: false
@@ -61,4 +60,5 @@ config:
   delay: '0'
   runWhenFirstReferenced: true
   preserveStateOnPageChange: true
+kind: workflow
 index: 1

@@ -2,9 +2,9 @@ id: '16939989403350.7144306721926348'
 name: newAction
 nameConfigured: false
 steps:
-  - id: '16939989434950.3531681775208908'
+  - id: '16986809405190.7488254923723174'
     type: customSQLQuery
-    name: query
+    name: query2
     params:
       - type: query
         value: >-
@@ -19,7 +19,7 @@ steps:
         valueType: interpolatedValue
         interpolationType: string
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: custom
         mustSelectFirst: true
       - type: preparedQuery
@@ -59,7 +59,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
@@ -78,4 +77,5 @@ config:
 assigned: false
 selected: true
 configured: true
+kind: workflow
 index: 11

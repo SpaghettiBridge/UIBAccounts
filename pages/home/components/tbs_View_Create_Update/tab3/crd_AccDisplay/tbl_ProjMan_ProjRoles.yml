@@ -252,6 +252,10 @@ slots:
             - xs
           width: 120
           filter: true
+          allowResetValue:
+            value: false
+            dataValue: 'false'
+            withData: false
         index: 10
         slots: []
       - id: '16939991187930.22776644350012387'

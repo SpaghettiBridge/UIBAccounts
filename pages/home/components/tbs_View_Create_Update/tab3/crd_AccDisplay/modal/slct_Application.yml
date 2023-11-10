@@ -38,6 +38,14 @@ properties:
     position: horizontal
     align: left
   labelWidth: 15
+  allowSelectAll:
+    value: false
+    dataValue: 'false'
+    withData: false
+  allowResetValue:
+    value: false
+    dataValue: 'false'
+    withData: false
 actions:
   selectChange:
     - action: '16969457979160.5293120911869511'

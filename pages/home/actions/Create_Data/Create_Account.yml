@@ -2,12 +2,12 @@ id: '16939915598520.36986949053327467'
 name: Create_Account
 nameConfigured: true
 steps:
-  - id: '16939915631520.32397042586401015'
+  - id: '16986648481910.6580295999611052'
     type: CREATE_ENTITY
-    name: create
+    name: create2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.accounts
@@ -127,7 +127,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: Are you sure you'd like to proceed with "{{actions.Create_Account.name}}"?
@@ -146,4 +145,5 @@ assigned: true
 selected: true
 configured: true
 parentId: '16939972929790.9691118555998752'
+kind: workflow
 index: 5

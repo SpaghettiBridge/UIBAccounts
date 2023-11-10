@@ -53,6 +53,7 @@ properties:
     value: false
     dataValue: 'true'
     withData: false
+  limit: '15'
 actions:
   smartTableCreate:
     - action: '16939951600040.2583658724205069'
@@ -183,6 +184,10 @@ slots:
                 }
               ]
             withData: false
+          allowResetValue:
+            value: false
+            dataValue: 'false'
+            withData: false
         index: 5
         slots: []
       - id: '16939950840760.08389644165489929'
@@ -217,6 +222,10 @@ slots:
           fieldTooltip: >-
             {{"Current Value: "+
             ui.tbl_AccountServices.selectedRow.data.service_name}}
+          allowResetValue:
+            value: false
+            dataValue: 'false'
+            withData: false
         index: 3
         actions: {}
         slots: []
@@ -245,5 +254,9 @@ slots:
                 __UIBAKERY__SYSTEM_ID__: '16939961815040.498059160061872'
             dataValue: ''
             withData: true
+          allowResetValue:
+            value: false
+            dataValue: 'false'
+            withData: false
         index: 2
         slots: []

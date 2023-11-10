@@ -17,7 +17,6 @@ singleStep: true
 mode: manual
 modeConfigured: true
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: Are you sure you'd like to proceed with "{{actions.BulkUpdateRoles.name}}"?
@@ -36,4 +35,5 @@ assigned: true
 selected: true
 configured: true
 parentId: '16939973606810.1657775421887091'
+kind: workflow
 index: 20

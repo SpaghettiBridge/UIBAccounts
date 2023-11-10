@@ -2,12 +2,12 @@ id: '16969457979160.5293120911869511'
 name: find_currentAppRoles
 nameConfigured: true
 steps:
-  - id: '16969458023550.23340519947313632'
+  - id: '16986649354380.49955089172827916'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_application_accounts
@@ -30,11 +30,11 @@ steps:
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -61,7 +61,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 parentId: '16939972753810.5077860573161239'
 config:
   shouldConfirm: false
@@ -82,4 +81,5 @@ config:
 assigned: true
 selected: true
 configured: true
+kind: workflow
 index: 14

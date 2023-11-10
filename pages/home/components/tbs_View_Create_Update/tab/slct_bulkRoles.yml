@@ -38,6 +38,14 @@ properties:
     position: vertical
     align: left
   __UIBAKERY__SHOW__CONDITION__CODE__: '{{ui.slct_apps.value.includes("Referrals")}}'
+  allowSelectAll:
+    value: false
+    dataValue: 'false'
+    withData: false
+  allowResetValue:
+    value: false
+    dataValue: 'false'
+    withData: false
 actions:
   selectChange: []
   init: []

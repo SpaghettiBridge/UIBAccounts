@@ -2,12 +2,12 @@ id: '16969453067400.7209882124587377'
 name: create_Account_App_Role
 nameConfigured: true
 steps:
-  - id: '16969453105320.3465648866459874'
+  - id: '16986648556000.8223365293959644'
     type: CREATE_ENTITY
-    name: create
+    name: create2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_application_accounts
@@ -94,7 +94,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 parentId: '16939972929790.9691118555998752'
 config:
   shouldConfirm: false
@@ -115,4 +114,5 @@ config:
 assigned: true
 selected: true
 configured: true
+kind: workflow
 index: 6

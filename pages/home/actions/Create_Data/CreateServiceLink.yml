@@ -2,12 +2,12 @@ id: '16939939589040.5464394845783873'
 name: CreateServiceLink
 nameConfigured: true
 steps:
-  - id: '16939939612580.1871088077558467'
+  - id: '16986648065260.5106372810821747'
     type: CREATE_ENTITY
-    name: create
+    name: create2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_account_services
@@ -48,7 +48,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: >-
@@ -69,4 +68,5 @@ assigned: true
 selected: true
 configured: true
 parentId: '16939972929790.9691118555998752'
+kind: workflow
 index: 3

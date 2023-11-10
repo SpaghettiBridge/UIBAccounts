@@ -2,12 +2,12 @@ id: '16939960853890.37173935591615903'
 name: UpdateServiceLink
 nameConfigured: true
 steps:
-  - id: '16939960877940.9119374665110285'
+  - id: '16986649583920.1238500410561667'
     type: UPDATE_ENTITY
-    name: update
+    name: update2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.join_account_services
@@ -46,10 +46,10 @@ steps:
         valueType: custom
       - type: replace
         value: false
-        valueType: string
+        valueType: custom
       - type: bulk
         value: false
-        valueType: string
+        valueType: custom
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -70,7 +70,6 @@ singleStep: true
 mode: manual
 modeConfigured: true
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: >-
@@ -91,4 +90,5 @@ assigned: true
 selected: true
 configured: true
 parentId: '16939973121030.1748892178114989'
+kind: workflow
 index: 18

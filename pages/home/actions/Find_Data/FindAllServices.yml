@@ -2,12 +2,12 @@ id: '16939910750440.7727719153379322'
 name: FindAllServices
 nameConfigured: true
 steps:
-  - id: '16939910773340.43957085103241855'
+  - id: '16986648654900.6528034580801314'
     type: LOAD_COLLECTION
-    name: load
+    name: load2
     params:
       - type: datasourceId
-        value: Supabase Bridgelink Apps Database
+        value: Dvelopment Database
         valueType: string
       - type: resourceId
         value: public.services
@@ -22,15 +22,15 @@ steps:
           offset:
             value: ''
           orderBy:
-            value: service_name
+            value: ''
           orderDirection:
             value: asc
         valueType: custom
+        interpolationType: string
       - type: additionalParams
-        value:
-          - name: ''
-            value: ''
+        value: []
         valueType: custom
+        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue
@@ -50,7 +50,6 @@ singleStep: false
 mode: manual
 modeConfigured: false
 parentPageId: '1'
-folder: false
 config:
   shouldConfirm: false
   confirmMessage: Are you sure you'd like to proceed with "{{actions.FindAllServices.name}}"?
@@ -69,4 +68,5 @@ assigned: false
 selected: true
 configured: true
 parentId: '16939972753810.5077860573161239'
+kind: workflow
 index: 8

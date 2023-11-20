@@ -4,7 +4,7 @@ nameConfigured: true
 steps:
   - id: '16986648481910.6580295999611052'
     type: CREATE_ENTITY
-    name: create2
+    name: create
     params:
       - type: datasourceId
         value: Dvelopment Database
@@ -45,6 +45,7 @@ steps:
     fallthroughError: false
     isChanged: true
     paused: false
+    nameConfigured: true
   - id: '16939942456060.9882633487307189'
     type: loopAction
     name: loop

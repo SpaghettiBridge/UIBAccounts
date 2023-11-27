@@ -1,0 +1,47 @@
+id: '17010862366990.3172298021114879'
+kind: workflow
+name: onTabChange
+nameConfigured: true
+steps:
+  - id: '17010862388750.1445035615543131'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: |-
+          switch({{ui.tbs_View_Create_Update.selectedIndex}}) {
+            case 0:
+              {{actions.findIndividualAccountServices.trigger({type: 'table'})}}
+              break;
+            case 1:
+          {{ui.tgs_Services.setValue("")}}
+              break;
+            case 2:
+          {{ui.tgs_Services.setValue("")}}
+              {{ui.slct_Account.reset()}}
+              break;
+            default:
+          }
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onTabChange.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onTabChange.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onTabChange.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+index: 27

@@ -44,10 +44,17 @@ properties:
     withData: false
   selectedRowIndex: ''
   rowBackgroundColor: ''
+  showEditAction:
+    value: true
+    dataValue: 'false'
+    withData: false
 actions:
   smartTableRowSelect:
     - action: '16939950514870.5376450029828428'
-      paramCode: ''
+      paramCode: |-
+        {
+          type: 'table'
+        }
       blockPageLoad: false
       index: 0
     - action: '16939989403350.7144306721926348'
@@ -60,7 +67,10 @@ actions:
       index: 2
   init: []
   smartTableCreate: []
-  smartTableEdit: []
+  smartTableEdit:
+    - action: '17010910087940.7331702468099202'
+      paramCode: ''
+      index: 3
   smartTableBulkEdit: []
   smartTableDelete: []
   smartTableRowClick: []
@@ -105,6 +115,7 @@ slots:
             - xs
           width: '60'
           filter: true
+          forceView: true
         index: 1
         slots: []
       - id: '16939907105090.3573917242214706'
@@ -159,6 +170,7 @@ slots:
             - xs
           width: '120'
           filter: true
+          forceView: false
         index: 4
         slots: []
       - id: '16939907105090.2875548020403249'
@@ -173,12 +185,12 @@ slots:
           primaryKey: false
           options:
             value:
-              - value: active
-                color: primary
-                __UIBAKERY__SYSTEM_ID__: '16939907105090.4972373804495225'
               - value: Active
                 color: success
                 __UIBAKERY__SYSTEM_ID__: '16939907105090.709452766876745'
+              - value: Inactive
+                color: primary
+                __UIBAKERY__SYSTEM_ID__: '16939907105090.4972373804495225'
             dataValue: |-
               [
                 {

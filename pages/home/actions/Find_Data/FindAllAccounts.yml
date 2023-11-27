@@ -26,11 +26,11 @@ steps:
           orderDirection:
             value: asc
         valueType: custom
-        interpolationType: string
       - type: additionalParams
-        value: []
+        value:
+          - name: ''
+            value: ''
         valueType: custom
-        interpolationType: string
       - type: customDatabaseName
         value: ''
         valueType: interpolatedValue

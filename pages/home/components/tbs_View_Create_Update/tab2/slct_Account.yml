@@ -47,7 +47,10 @@ properties:
 actions:
   selectChange:
     - action: '16939950514870.5376450029828428'
-      paramCode: ''
+      paramCode: |-
+        {
+          type: 'select'
+        }
       blockPageLoad: false
       index: 0
   init: []

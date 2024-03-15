@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    name:
+      value: '{{ui.ipt_FirstName.value}} {{ui.ipt_LastName.value}}'
+    name_first:
+      value: '{{ui.ipt_FirstName.value}}'
+    name_last:
+      value: '{{ui.ipt_LastName.value}}'
+    email:
+      value: '{{ui.ipt_Email.value}}'
+    user_status:
+      value: Active
+  custom: ''

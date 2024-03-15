@@ -1,0 +1,53 @@
+id: '16939951600040.2583658724205069'
+name: CreateNewLink
+nameConfigured: true
+steps:
+  - id: '16939951724380.5060815797989022'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '16939939589040.5464394845783873'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.CreateNewLink.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.CreateNewLink.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.CreateNewLink.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: true
+selected: true
+configured: true
+parentId: '16939972929790.9691118555998752'
+kind: workflow

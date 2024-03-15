@@ -20,6 +20,14 @@ properties:
     - xl
     - xs
   text: Create Account
+  disabled:
+    value: false
+    dataValue: '{{actions.newAction4.data|| false}}'
+    withData: true
+  status:
+    value: primary-light
+    dataValue: primary
+    withData: false
 actions:
   buttonClick:
     - action: '16939915598520.36986949053327467'

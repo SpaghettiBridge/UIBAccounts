@@ -1,0 +1,1 @@
+SELECT * FROM public.accounts WHERE LOWER(public.accounts.email) LIKE LOWER({{ui.ipt_Email.value}})

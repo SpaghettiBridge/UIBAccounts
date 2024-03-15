@@ -1,0 +1,6 @@
+mode: structured
+valueByMode:
+  structured:
+    role:
+      value: '{{ui.tbl_GenApproles.editedRow.data.role}}'
+  custom: ''

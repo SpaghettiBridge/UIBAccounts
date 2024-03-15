@@ -165,6 +165,7 @@ slots:
           width: 120
           filter: true
           forceView: true
+          enableAdding: false
         parentSlotId: '16939996320970.6237916295629691'
         index: 4
         slots: []

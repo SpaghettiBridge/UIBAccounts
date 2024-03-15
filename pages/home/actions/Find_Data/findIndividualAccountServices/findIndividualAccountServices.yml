@@ -1,0 +1,82 @@
+id: '16939950514870.5376450029828428'
+name: findIndividualAccountServices
+nameConfigured: true
+steps:
+  - id: '16986648803300.672724136629774'
+    type: LOAD_COLLECTION
+    name: load2
+    params:
+      - type: datasourceId
+        value: Dvelopment Database
+        valueType: string
+      - type: resourceId
+        value: public.join_account_services
+        valueType: string
+      - type: filters
+        value:
+          - column: account_id
+            operation: '='
+            value:
+              value: >-
+                {{if(params.type == "select"){return
+                ui.slct_Account.value}return
+                ui.tbl_AllAccounts.selectedRow.data.id}}
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '16939972753810.5077860573161239'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.findIndividualAccountServices.name}}"?
+  showSuccessToast: false
+  successToast: >-
+    Action "{{actions.findIndividualAccountServices.name}}" successfully
+    executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.findIndividualAccountServices.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: false
+  preserveStateOnPageChange: false
+assigned: true
+selected: true
+configured: true
+kind: workflow

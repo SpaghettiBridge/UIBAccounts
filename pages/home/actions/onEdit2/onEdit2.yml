@@ -1,0 +1,172 @@
+id: '17010910087940.7331702468099202'
+kind: workflow
+name: onEdit2
+nameConfigured: true
+steps:
+  - id: '17010913233090.8807713259043706'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: ./query-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./query-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.tbl_AllAccounts.editedRow.data.email)
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.tbl_AllAccounts.editedRow.data.id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+  - id: '17010913488370.9053809497383427'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17010910151780.4126414083950736'
+                type: UPDATE_ENTITY
+                name: update
+                params:
+                  - type: datasourceId
+                    value: Supabase Bridgelink Apps Database
+                    valueType: string
+                  - type: resourceId
+                    value: public.accounts
+                    valueType: string
+                  - type: filter
+                    value:
+                      - column: id
+                        operation: '='
+                        value:
+                          value: '{{ui.tbl_AllAccounts.editedRow.data.id}}'
+                    valueType: custom
+                  - type: entity
+                    value: ./update-entity.yml
+                    valueType: custom
+                  - type: replace
+                    value: false
+                    valueType: string
+                  - type: bulk
+                    value: false
+                    valueType: string
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 2
+                fallthroughError: false
+                isChanged: true
+                paused: false
+          - condition: false
+            steps:
+              - id: '17010913825440.8391199003829841'
+                type: showToast
+                name: notification
+                params:
+                  - type: message
+                    value: An account with this email already exists!
+                    valueType: interpolatedValue
+                  - type: type
+                    value: warning
+                    valueType: string
+                  - type: icon
+                    value: checkmark-circle-2
+                    valueType: string
+                  - type: duration
+                    value: '3000'
+                    valueType: interpolatedValue
+                  - type: position
+                    value: top-end
+                    valueType: string
+                  - type: hideOnClick
+                    value: false
+                    valueType: custom
+                level: 2
+                fallthroughError: false
+                isChanged: true
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+  - id: '17010916021390.7609011306307212'
+    type: executeAction
+    name: newStep
+    params:
+      - type: action
+        value: '16939907045040.452679144102216'
+        valueType: string
+      - type: isActionsLibraryCall
+        value: false
+        valueType: string
+      - type: customParams
+        value: ./newStep-customParams.js
+        valueType: string
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onEdit2.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onEdit2.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onEdit2.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false

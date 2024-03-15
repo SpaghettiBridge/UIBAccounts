@@ -1,0 +1,16 @@
+mode: structured
+valueByMode:
+  structured:
+    email:
+      value: '{{ui.tbl_AllAccounts.editedRow.data.email}}'
+    name:
+      value: >-
+        {{ui.tbl_AllAccounts.editedRow.data.name_first}}
+        {{ui.tbl_AllAccounts.editedRow.data.name_last}}
+    name_first:
+      value: '{{ui.tbl_AllAccounts.editedRow.data.name_first}}'
+    name_last:
+      value: '{{ui.tbl_AllAccounts.editedRow.data.name_last}}'
+    user_status:
+      value: '{{ui.tbl_AllAccounts.editedRow.data.user_status}}'
+  custom: ''

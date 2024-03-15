@@ -24,6 +24,16 @@ properties:
     text: Email
     position: horizontal
     align: left
-actions: {}
+actions:
+  valueChange:
+    - action: '17098148412060.6323054269969024'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  enter: []
+  focusEvent: []
+  blurEvent: []
+  init: []
 index: 5
 slots: []

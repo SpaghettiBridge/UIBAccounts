@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    account_id:
+      value: '{{params.id}}'
+    app_id:
+      value: 14ef618f-a7cb-47ee-a2ac-a6ef894195fe
+  custom: ''

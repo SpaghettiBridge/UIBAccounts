@@ -1,0 +1,21 @@
+mode: structured
+valueByMode:
+  structured:
+    service_id:
+      value: >-
+        {{
+        if(ui.tbl_AccountServices.editedRow.data.service_name.split("-").length
+        ==5){return ui.tbl_AccountServices.editedRow.data.service_name} return
+        ui.tbl_AccountServices.editedRow.data.service_id }}
+    service_name:
+      value: >-
+        {{ 
+        if(ui.tbl_AccountServices.editedRow.data.service_name.split("-").length
+        ==5){return actions.FindAllServices.data.filter(z=>z.id ==
+        ui.tbl_AccountServices.editedRow.data.service_name)[0].service_name}
+        return ui.tbl_AccountServices.editedRow.data.service_name  }}
+    name:
+      value: '{{ui.tbl_AccountServices.editedRow.data.name}}'
+    user_role:
+      value: '{{ui.tbl_AccountServices.editedRow.data.user_role}}'
+  custom: ''

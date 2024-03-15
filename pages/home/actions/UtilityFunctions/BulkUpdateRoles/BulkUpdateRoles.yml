@@ -1,0 +1,38 @@
+id: '16939931312250.2903275771789384'
+name: BulkUpdateRoles
+nameConfigured: true
+steps:
+  - id: '16939931331950.39392731351116606'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.BulkUpdateRoles.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.BulkUpdateRoles.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.BulkUpdateRoles.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: true
+selected: true
+configured: true
+parentId: '16939973606810.1657775421887091'
+kind: workflow

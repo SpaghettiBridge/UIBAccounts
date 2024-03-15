@@ -1,0 +1,50 @@
+id: '16940084254480.17707093871770985'
+name: onEvent
+nameConfigured: true
+steps:
+  - id: '16940084291340.602743092872793'
+    type: showToast
+    name: notification
+    params:
+      - type: message
+        value: Test message
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: type
+        value: success
+        valueType: string
+      - type: icon
+        value: checkmark-circle-2
+        valueType: string
+      - type: duration
+        value: '3000'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: position
+        value: top-end
+        valueType: string
+      - type: hideOnClick
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: false
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onEvent.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onEvent.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onEvent.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+kind: workflow

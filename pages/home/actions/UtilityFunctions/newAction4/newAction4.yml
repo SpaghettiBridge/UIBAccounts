@@ -1,0 +1,36 @@
+id: '17098148412060.6323054269969024'
+kind: workflow
+name: newAction4
+nameConfigured: false
+steps:
+  - id: '17098148456070.09985090861674828'
+    type: customAsyncCode
+    name: code
+    params:
+      - type: asyncCode
+        value: ./code.js
+        valueType: interpolatedValue
+        interpolationType: code
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: '16939973606810.1657775421887091'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.newAction4.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.newAction4.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.newAction4.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: false
+  preserveStateOnPageChange: false
+selected: true
+configured: true

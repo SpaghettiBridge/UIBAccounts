@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    account_id:
+      value: '{{params.accid}}'
+    service_id:
+      value: '{{params.serviceid}}'
+    service_name:
+      value: '{{params.servname}}'
+    name:
+      value: '{{params.name}}'
+    user_role:
+      value: '{{params.role}}'
+  custom: ''

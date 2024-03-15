@@ -1,0 +1,10 @@
+mode: structured
+valueByMode:
+  structured:
+    app_id:
+      value: '{{ui.slct_Application.value}}'
+    role:
+      value: '{{ui.ipt_Role.value}}'
+    account_id:
+      value: '{{ui.tbl_AllAccounts.selectedRow.data.id}}'
+  custom: ''

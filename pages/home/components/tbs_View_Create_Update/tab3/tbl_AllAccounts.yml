@@ -116,6 +116,7 @@ slots:
           width: '60'
           filter: true
           forceView: true
+          enableAdding: false
         index: 1
         slots: []
       - id: '16939907105090.3573917242214706'

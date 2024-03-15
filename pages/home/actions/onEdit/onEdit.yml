@@ -1,0 +1,65 @@
+id: '16939999997900.924361207001483'
+name: onEdit
+nameConfigured: true
+steps:
+  - id: '16986649695750.9988612258518119'
+    type: UPDATE_ENTITY
+    name: update2
+    params:
+      - type: datasourceId
+        value: Dvelopment Database
+        valueType: string
+      - type: resourceId
+        value: public.join_application_accounts
+        valueType: string
+      - type: filter
+        value:
+          - column: id
+            operation: '='
+            value:
+              value: '{{ui.tbl_GenApproles.editedRow.data.roleid}}'
+        valueType: custom
+      - type: entity
+        value: ./update2-entity.yml
+        valueType: custom
+      - type: replace
+        value: false
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onEdit.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onEdit.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onEdit.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+kind: workflow

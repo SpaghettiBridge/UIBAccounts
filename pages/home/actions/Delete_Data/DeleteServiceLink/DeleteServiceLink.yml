@@ -1,0 +1,65 @@
+id: '16939960222170.6965706449509077'
+name: DeleteServiceLink
+nameConfigured: true
+steps:
+  - id: '16986649472880.8520084323391095'
+    type: DELETE_ENTITY
+    name: delete2
+    params:
+      - type: datasourceId
+        value: Dvelopment Database
+        valueType: string
+      - type: resourceId
+        value: public.join_account_services
+        valueType: string
+      - type: filter
+        value:
+          - column: id
+            operation: '='
+            value:
+              value: '{{ui.tbl_AccountServices.deletedRow.data.id}}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: interpolatedValue
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+singleStep: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.DeleteServiceLink.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.DeleteServiceLink.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.DeleteServiceLink.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+assigned: true
+selected: true
+configured: true
+parentId: '16939973103400.03593215707903363'
+kind: workflow

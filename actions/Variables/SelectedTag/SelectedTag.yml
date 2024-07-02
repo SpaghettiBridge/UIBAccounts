@@ -1,0 +1,11 @@
+id: '16939984552930.024336758655781443'
+nameConfigured: true
+name: SelectedTag
+kind: store_item
+parentId: '17199156666700.05587910226739501'
+storeItem:
+  value: ''
+  valueType: string
+  initialValue: ''
+  version: 1
+steps: []

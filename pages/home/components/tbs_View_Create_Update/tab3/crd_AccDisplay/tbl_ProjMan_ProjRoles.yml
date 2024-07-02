@@ -35,7 +35,7 @@ properties:
     withData: true
     dataValue: '{{actions.newAction.loading}}'
     value: false
-  rowVariation: dense
+  rowHeight: small
 actions: {}
 index: 4
 slots:

@@ -54,6 +54,7 @@ properties:
     dataValue: 'true'
     withData: false
   limit: '15'
+  rowHeight: dynamic
 actions:
   smartTableCreate:
     - action: '16939951600040.2583658724205069'

@@ -43,8 +43,8 @@ properties:
     value: false
     dataValue: 'true'
     withData: false
-  rowVariation: dense
   limit: '8'
+  rowHeight: small
 actions: {}
 index: 6
 slots:

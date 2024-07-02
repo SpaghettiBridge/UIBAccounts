@@ -35,7 +35,6 @@ properties:
     withData: true
     dataValue: '{{actions.FindAllAccounts.loading}}'
     value: false
-  rowVariation: dense
   limit: '14'
   showFilter: true
   showClearSelection:
@@ -48,6 +47,7 @@ properties:
     value: true
     dataValue: 'false'
     withData: false
+  rowHeight: small
 actions:
   smartTableRowSelect:
     - action: '16939950514870.5376450029828428'

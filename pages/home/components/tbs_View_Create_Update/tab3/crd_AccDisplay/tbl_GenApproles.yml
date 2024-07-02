@@ -47,6 +47,7 @@ properties:
     value: true
     dataValue: 'false'
     withData: false
+  rowHeight: dynamic
 actions:
   smartTableEdit:
     - action: '16939999997900.924361207001483'

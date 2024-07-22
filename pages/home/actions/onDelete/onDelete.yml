@@ -2,13 +2,10 @@ id: '16969464320270.9052162605805694'
 name: onDelete
 nameConfigured: true
 steps:
-  - id: '16986649836470.34823064612803534'
+  - id: '17216384695180.8173828651458768'
     type: DELETE_ENTITY
-    name: delete2
+    name: delete
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.join_application_accounts
         valueType: string
@@ -33,6 +30,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

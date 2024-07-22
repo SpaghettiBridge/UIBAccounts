@@ -2,20 +2,16 @@ id: '16939995383410.7737130914147108'
 name: newAction2
 nameConfigured: false
 steps:
-  - id: '16986649181810.16915989445749902'
+  - id: '17216384011750.23649608676254275'
     type: customSQLQuery
-    name: query2
+    name: query
     params:
       - type: query
-        value: ./query2-query.sql
+        value: ./query-query.sql
         valueType: interpolatedValue
         interpolationType: string
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: custom
-        mustSelectFirst: true
       - type: preparedQuery
-        value: ./query2-preparedQuery.sql
+        value: ./query-preparedQuery.sql
         valueType: interpolatedValue
       - type: preparedQueryParams
         value:
@@ -36,6 +32,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

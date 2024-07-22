@@ -2,14 +2,10 @@ id: '16969451423520.5741608327393235'
 name: Find_Applications
 nameConfigured: true
 steps:
-  - id: '16986649235350.42347166478411147'
+  - id: '17216384061850.575410762671843'
     type: LOAD_COLLECTION
-    name: load2
+    name: load
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: custom
-        mustSelectFirst: true
       - type: resourceId
         value: public.applications
         valueType: custom
@@ -47,6 +43,9 @@ steps:
         interpolationType: code
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

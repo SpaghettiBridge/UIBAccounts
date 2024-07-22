@@ -2,18 +2,15 @@ id: '16968667335040.6483763399542797'
 name: createPublicJoinApplicationAccounts
 nameConfigured: true
 steps:
-  - id: '16986649949940.7357577997366456'
+  - id: '17216385359710.048300814457119756'
     type: CREATE_ENTITY
-    name: create2
+    name: create
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.join_application_accounts
         valueType: string
       - type: entity
-        value: ./create2-entity.yml
+        value: ./create-entity.yml
         valueType: custom
       - type: customDatabaseName
         value: ''
@@ -26,6 +23,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

@@ -2,13 +2,10 @@ id: '16939910750440.7727719153379322'
 name: FindAllServices
 nameConfigured: true
 steps:
-  - id: '16986648654900.6528034580801314'
+  - id: '17216383562050.754805214118462'
     type: LOAD_COLLECTION
-    name: load2
+    name: load
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.services
         valueType: string
@@ -42,6 +39,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

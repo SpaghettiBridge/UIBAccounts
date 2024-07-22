@@ -51,13 +51,10 @@ steps:
         value:
           - condition: true
             steps:
-              - id: '16986648481910.6580295999611052'
+              - id: '17216383309770.6987503424807824'
                 type: CREATE_ENTITY
                 name: create
                 params:
-                  - type: datasourceId
-                    value: Dvelopment Database
-                    valueType: string
                   - type: resourceId
                     value: public.accounts
                     valueType: string
@@ -75,6 +72,9 @@ steps:
                     valueType: interpolatedValue
                   - type: mapperEnabled
                     value: false
+                    valueType: custom
+                  - type: datasourceId
+                    value: Supabase Bridgelink Apps Database
                     valueType: custom
                 level: 1
                 fallthroughError: false

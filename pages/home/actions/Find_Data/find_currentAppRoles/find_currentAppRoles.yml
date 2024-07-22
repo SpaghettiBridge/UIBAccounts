@@ -2,13 +2,10 @@ id: '16969457979160.5293120911869511'
 name: find_currentAppRoles
 nameConfigured: true
 steps:
-  - id: '16986649354380.49955089172827916'
+  - id: '17216384172730.9192910133440728'
     type: LOAD_COLLECTION
-    name: load2
+    name: load
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.join_application_accounts
         valueType: string
@@ -39,13 +36,16 @@ steps:
         value: ''
         valueType: interpolatedValue
       - type: successMapper
-        value: ./load2-successMapper.js
+        value: ./load-successMapper.js
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
       - type: mapperEnabled
         value: true
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

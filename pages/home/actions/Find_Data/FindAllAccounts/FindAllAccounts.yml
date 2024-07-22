@@ -2,13 +2,10 @@ id: '16939907045040.452679144102216'
 name: FindAllAccounts
 nameConfigured: true
 steps:
-  - id: '16986648901610.3694879558149844'
+  - id: '17216383835830.45897077447114953'
     type: LOAD_COLLECTION
-    name: load2
+    name: load
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.accounts
         valueType: string
@@ -46,6 +43,9 @@ steps:
         valueType: interpolatedValue
       - type: mapperEnabled
         value: false
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false

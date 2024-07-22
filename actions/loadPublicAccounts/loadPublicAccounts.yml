@@ -2,13 +2,10 @@ id: '16968667230690.6781944769343413'
 name: loadPublicAccounts
 nameConfigured: true
 steps:
-  - id: '16986650051230.9019140095944167'
+  - id: '17216385188970.6144260384828006'
     type: LOAD_COLLECTION
-    name: load3
+    name: load
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.join_application_accounts
         valueType: string
@@ -47,16 +44,16 @@ steps:
       - type: mapperEnabled
         value: false
         valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
+        valueType: custom
     level: 0
     fallthroughError: false
     isChanged: true
-  - id: '16986650150610.6030967359389483'
+  - id: '17216385277240.28375476645097986'
     type: LOAD_COLLECTION
-    name: load2
+    name: load3
     params:
-      - type: datasourceId
-        value: Dvelopment Database
-        valueType: string
       - type: resourceId
         value: public.accounts
         valueType: string
@@ -83,13 +80,16 @@ steps:
         value: ''
         valueType: interpolatedValue
       - type: successMapper
-        value: ./load2-successMapper.js
+        value: ./load3-successMapper.js
         valueType: interpolatedValue
       - type: failureMapper
         value: ''
         valueType: interpolatedValue
       - type: mapperEnabled
         value: true
+        valueType: custom
+      - type: datasourceId
+        value: Supabase Bridgelink Apps Database
         valueType: custom
     level: 0
     fallthroughError: false
